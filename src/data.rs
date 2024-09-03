@@ -31,7 +31,7 @@ impl Position {
             }
             Direction::Up => {
                 if step > self.1 {
-                    return Err(());
+                    Err(())
                 } else {
                     Ok(self.next_pos(dir, step))
                 }
